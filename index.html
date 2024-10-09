@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
     <title>Lavachen's Blog</title>
   </head>
   <body>
-    <h1>Welcome to Lavachen's Blog</h1>
-    <p>I'm hosted by GitHub Pages.</p>
+    <header>
+      <div>
+        <nav>
+          <h1 class="sixtyfour-convergence-font">Lavachen's Blog</h1>
+          <ul>
+            <li>
+              <a>主页</a>
+            </li>
+            <li>
+              <a>计算机科学相关</a>
+            </li>
+            <li>
+              <a>音乐相关</a>
+            </li>
+            <li>
+              <a href="https://lava-chen.github.io/chuangxun/index">创训</a>
+            </li>
+            <li>
+              <a>项目日志</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <button id="satelliteTrackButton">Satellite Track</button>
+    <script>
+      document
+        .getElementById("satelliteTrackButton")
+        .addEventListener("click", function () {
+          try {
+            window.location.href =
+              "https://lava-chen.github.io/satellite_orbit";
+          } catch (error) {
+            console.error("跳转失败:", error);
+            alert("页面跳转失败，请稍后再试。");
+          }
+        });
+    </script>
   </body>
 </html>

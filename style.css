@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence:BLED,SCAN,XELA,YELA@19,8,-100,-89&display=swap");
+
+.sixtyfour-convergence-font {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 19, "SCAN" 8, "XELA" -100, "YELA" -89;
+  text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #f4f4f4; /* 头部背景色 */
+  padding: 20px; /* 添加内边距 */
+}
+li {
+  display: inline; /* 水平排列列表项 */
+  margin-right: 20px; /* 列表项之间添加间距 */
+}
