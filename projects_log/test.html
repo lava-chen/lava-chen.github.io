@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="github_md_style.css" />
+    <title>Markdown 转换器</title>
+    <!-- 引入 MathJax 库来渲染 LaTeX 数学公式 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <h2>Markdown 转换器</h2>
+
+    <textarea id="markdown" rows="10" cols="50">
+# 标题1
+这是一个包含数学公式的段落: \( E = mc^2 \)
+代码块示例:
+```
+def hello(): print("Hello, world!")
+```
+行内代码示例：`console.log('Hello, world!')`
+# 标题1
+## 标题2
+**粗体文本**
+*斜体文本*
+[链接](https://example.com)
+- 列表项1
+- 列表项2
+</textarea
+    >
+
+    <button onclick="convertToHTML()">转换为 HTML</button>
+
+    <h3>转换后的 HTML：</h3>
+    <div id="output"></div>
+
+    <script>
+      // 转换函数
+      function convertToHTML() {
+        let markdownText = document.getElementById("markdown").value;
+
+        // 处理标题、粗体、斜体、链接等常见的 Markdown 语法
+        let htmlText = markdownText
+          .replace(/^# (.*$)/gim, "<h1>$1</h1>")
+          .replace(/^## (.*$)/gim, "<h2>$1</h2>")
+          .replace(/^### (.*$)/gim, "<h3>$1</h3>")
+          .replace(/\*\*(.*?)\*\*/gim, "<strong>$1</strong>")
+          .replace(/\*(.*?)\*/gim, "<em>$1</em>")
+          .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>');
+
+        // 处理行内代码 `code`
+        htmlText = htmlText.replace(/`([^`]+)`/g, "<code>$1</code>");
+
+        // 处理代码块 ```code```
+        htmlText = htmlText.replace(
+          /```([^```]+)```/g,
+          "<pre><code>$1</code></pre>"
+        );
+
+        // 显示转换后的 HTML
+        document.getElementById("output").innerHTML = htmlText;
+
+        // 触发 MathJax 来渲染 LaTeX 数学公式
+        MathJax.typeset();
+      }
+    </script>
+  </body>
+</html>
