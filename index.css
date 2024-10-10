@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence:BLED,SCAN,XELA,YELA@19,8,-100,-89&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet&display=swap");
 
 .sixtyfour-convergence-font {
   font-family: "Sixtyfour Convergence", sans-serif;
@@ -15,23 +16,42 @@
   font-weight: 500;
   font-style: normal;
 }
+.title-font {
+  font-family: "Playwrite DK Uloopet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 header {
-  background-color: #f4f4f4; /* 头部背景色 */
-  padding: 0 20px; /* 添加内边距 */
+  background-color: #ffffff; /* 头部背景色 */
+  padding: 0 40px; /* 添加内边距 */
 }
 li {
   display: inline; /* 水平排列列表项 */
   margin-right: 20px; /* 列表项之间添加间距 */
 }
+hr {
+  margin: 10px 40px;
+  border: none;
+  border-top: 3px solid #eeeeee;
+  border-radius: 3px;
+}
+.h1Large {
+  margin: 0px 0px;
+  font-size: 80px;
+}
 .navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.navBarMain {
+  margin: 0px 40px;
 }
 .ulFlex {
   display: flex;
@@ -39,7 +59,10 @@ li {
   padding: 0;
   margin: 0;
 }
+main {
+  margin: 0 40px;
+}
 a {
-  color: #333; /* 链接文字颜色 */
+  color: #333;
   text-decoration: none;
 }
