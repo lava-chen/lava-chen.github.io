@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/chuangxun/index.css" />
+    <title>Chuangxun's Homepage</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav class="navBar">
+          <h1 class="sixtyfour-convergence-font">Lavachen's Blog</h1>
+          <ul class="noto-sans-sc-font ulFlex">
+            <li><a href="#">主页</a></li>
+            <li>
+              <a href="https://lava-chen.github.io/CS/index">计算机科学相关</a>
+            </li>
+            <li><a href="#">音乐相关</a></li>
+            <li>
+              <a href="https://lava-chen.github.io/chuangxun/index">创训</a>
+            </li>
+            <li><a href="#">项目日志</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <button id="satelliteTrackButton">Satellite Track</button>
+    <script>
+      document
+        .getElementById("satelliteTrackButton")
+        .addEventListener("click", function () {
+          try {
+            window.location.href =
+              "https://lava-chen.github.io/satellite_orbit";
+          } catch (error) {
+            console.error("跳转失败:", error);
+            alert("页面跳转失败，请稍后再试。");
+          }
+        });
+    </script>
+  </body>
+</html>
