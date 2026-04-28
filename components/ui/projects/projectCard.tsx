@@ -18,13 +18,15 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           imgSrc && "h-full"
         }  flex h-full flex-col overflow-hidden rounded-lg border border-transparent shadow-nextjs dark:shadow-nextjs-dark`}
       >
-        <Image
-          alt={title}
-          src={imgSrc}
-          className="object-cover object-center md:h-36 lg:h-60"
-          width={1088}
-          height={612}
-        />
+        {imgSrc && (
+          <Image
+            alt={title}
+            src={imgSrc}
+            className="object-cover object-center md:h-36 lg:h-60"
+            width={1088}
+            height={612}
+          />
+        )}
 
         <div className="p-6">
           <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
