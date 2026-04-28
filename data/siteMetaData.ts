@@ -1,18 +1,18 @@
 export const siteMetadata = {
-  title: "Lava-chen's Blog",
-  author: "lava-chen",
-  headerTitle: "Lava-chen's Blog",
-  description: "目前博客还在搭建完善中，若想获得更多信息可以点击上方Notes",
+  title: "Chen Xuanyu | Physics-constrained DL for Precipitation",
+  author: "Chen Xuanyu",
+  headerTitle: "Chen Xuanyu",
+  description: "Undergraduate at Hohai University researching ML/DL for hydrology and precipitation nowcasting. Building DUYA, an AI Agent framework.",
   language: "en-us",
-  occupation: "Personal Developer",
+  occupation: "Undergraduate Researcher",
   school: "Hohai University",
-  theme: "system", // system, dark or light
-  siteUrl: "",
-  siteRepo: "",
+  theme: "light", // system, dark or light
+  siteUrl: "https://lavachen.org",
+  siteRepo: "https://github.com/lava-chen/lava-chen.github.io",
   siteLogo: `${process.env.BASE_PATH || ""}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ""}/static/images/twitter-card.png`,
   mastodon: "https://mastodon.social/@mastodonuser",
-  email: "lalluviachen@gmail.com",
+  email: "2301010227@hhu.edu.cn",
   github: "https://github.com/lava-chen",
   x: "https://twitter.com/x",
   facebook: "https://facebook.com",
@@ -37,16 +37,16 @@ export const siteMetadata = {
       // Remember to add 'us.umami.is' in `next.config.js` as a permitted domain for the CSP
     },
     // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    // plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     // If you are hosting your own Plausible.
     //   src: '', // e.g. https://plausible.my-domain.com/js/script.js
     // },
     // simpleAnalytics: {},
     // posthogAnalytics: {
-    //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
+    // posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     // },
     // googleAnalytics: {
-    //   googleAnalyticsId: '', // e.g. G-XXXXXXX
+    // googleAnalyticsId: '', // e.g. G-XXXXXXX
     // },
   },
   newsletter: {

@@ -24,7 +24,7 @@ export default function AboutPage() {
             About Me
           </h1>
           <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
-            进一步了解我和这个博客的目的。
+            Hydrology, Machine Learning, and Precipitation Nowcasting.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className="flex flex-col items-center space-x-2 pt-8 sm:pt-28">
             <Image
               src={Avatar}
-              alt="头像"
+              alt="avatar"
               width={192}
               height={192}
               objectFit="cover"
@@ -40,13 +40,16 @@ export default function AboutPage() {
             />
 
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
-              {siteMetadata.author}
+              Chen Xuanyu (陈炫羽)
             </h3>
             <div className="text-gray-500 dark:text-gray-400">
               {siteMetadata.occupation}
             </div>
             <div className="text-gray-500 dark:text-gray-400">
               {siteMetadata.school}
+            </div>
+            <div className="text-gray-500 dark:text-gray-400">
+              Hydrology & Water Resources Engineering
             </div>
 
             <div className="mt-2 flex gap-3">
@@ -61,27 +64,67 @@ export default function AboutPage() {
           </div>
 
           <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">
-            <p></p>
-            <h2> 🚀 大家好！我是 lava-chen </h2>
+            <h2>Education</h2>
+            <ul>
+              <li>
+                <strong>Bachelor of Engineering in Hydrology & Water Resources Engineering</strong>
+                <br />
+                Hohai University (河海大学), Nanjing, China
+                <br />
+                GPA: 4.29/5.0 | Expected Graduation: June 2027
+              </li>
+            </ul>
+
+            <h2>Research Interests</h2>
             <p>
-              我是一名个人开发者，热爱编程，喜欢分享知识。我目前在读大学，专注于学习各种计算机科学知识以及其他科学知识，同时会搭建各种个人感兴趣的项目。
+              Physics-constrained deep learning for precipitation nowcasting.
+              Interested in integrating physical conservation laws into neural network
+              architectures for more reliable hydrological predictions.
             </p>
-            <h2>为什么要开这个博客？</h2>
-            <blockquote>
-              <p>
-                我的想法是分享我所学到的知识，以提升自己的能力。同时作为一个前端的开发项目
-                🔧。
-              </p>
-            </blockquote>
+
+            <h2>Research Experience</h2>
+            <h3>1. D-PINN: Physics-Informed Neural Networks for Hydraulic Prediction</h3>
             <p>
-              我创办这个博客是为了记录和分享我在自学计算机技术之路上所获取的知识和实践经验。
+              <em>ICIC 2026 Oral Presentation (3rd Author)</em>
+              <br />
+              Developed physics-informed neural networks with dual-encoder architecture
+              incorporating Saint-Venant conservation laws for hydraulic prediction tasks.
             </p>
+
+            <h3>2. LightGBM Multi-source Precipitation Fusion</h3>
             <p>
-              写作和笔记帮助我巩固对新概念和技术的理解。我希望我的博客能成为同为开发者的有用资源
-              🌐。
+              <em>Under Prof. Yong Bin</em>
+              <br />
+              Built a three-stage fusion model combining satellite precipitation (FY-3G, GPM)
+              and gauge data. Achieved significant improvements: CC 0.739&rarr;0.891,
+              POD 0.524&rarr;0.997 in Fujian mountainous terrain.
             </p>
+
+            <h3>3. DUYA: Desktop AI Agent Framework</h3>
             <p>
-              我非常欢迎您对我所写内容的反馈和评论 <Emoji symbol="💬" />。
+              Self-built desktop AI Agent framework using Electron + Vite with hydrology-domain
+              knowledge base and multi-tool orchestration for autonomous satellite data
+              retrieval and flood warning workflows.
+            </p>
+
+            <h2>Awards</h2>
+            <ul>
+              <li>MCM/ICM Meritorious Award</li>
+              <li>National Math Competition Provincial First Prize</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+              <li><strong>Programming:</strong> Python, PyTorch, LightGBM</li>
+              <li><strong>Data:</strong> Satellite precipitation data (FY-3G, GPM, CLDAS)</li>
+              <li><strong>Tools:</strong> Git, Docker</li>
+            </ul>
+
+            <h2>Contact</h2>
+            <p>
+              Email: <a href="mailto:2301010227@hhu.edu.cn">2301010227@hhu.edu.cn</a>
+              <br />
+              GitHub: <a href="https://github.com/lava-chen">github.com/lava-chen</a>
             </p>
           </div>
         </div>

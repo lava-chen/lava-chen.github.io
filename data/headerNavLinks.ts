@@ -4,6 +4,7 @@ const headerNavLinks = [
   { href: "https://notes.lavachen.org", title: "Notes" },
   { href: "/projects", title: "Projects" },
   { href: "/about", title: "About" },
+  { href: "/cv", title: "CV" },
 ];
 
 export default headerNavLinks;
