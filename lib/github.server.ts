@@ -66,9 +66,13 @@ export async function fetchRepoData(
     );
 
     return repository;
-  } catch (error) {
-    console.error(error);
-
+  } catch (error: any) {
+    // Handle invalid/expired token (401) or other API errors gracefully
+    if (error?.status === 401 || error?.status === 403) {
+      console.error("GitHub API authentication failed - check GITHUB_API_TOKEN");
+    } else {
+      console.error("GitHub API error:", error?.message || error);
+    }
     return null;
   }
 }

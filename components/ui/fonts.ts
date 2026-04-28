@@ -1,8 +1,10 @@
-import { Inter, Lusitana } from "next/font/google";
+// System fonts for static export - no external network calls needed
+export const inter = {
+  className: 'font-sans',
+  style: { fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }
+};
 
-export const inter = Inter({ subsets: ["latin"] });
-
-export const lusitana = Lusitana({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+export const lusitana = {
+  className: 'font-serif',
+  style: { fontFamily: 'Georgia, "Times New Roman", serif' }
+};

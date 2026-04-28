@@ -15,7 +15,6 @@ declare module "pliny/utils/contentlayer";
 declare module "@heroicons/react/24/outline";
 declare module "markdown-it";
 declare module "contentlayer/source-files";
-declare module "bcrypt";
 
 declare module "layouts" {
   export const PostSimple: any;
