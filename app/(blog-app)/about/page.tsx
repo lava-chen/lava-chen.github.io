@@ -5,76 +5,88 @@ import SocialIcon from "@/components/ui/social-icons";
 
 export default function AboutPage() {
   return (
-    <div className="max-w-2xl mx-auto py-12">
-      <div className="space-y-6 pb-8">
-        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-          About Me
-        </h1>
-        <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg leading-relaxed">
-          Junior at Hohai University, studying hydrology. Interested in using deep
-          learning to improve precipitation nowcasting — particularly the physics-constrained
-          kind, and the data fusion problem when you&apos;re trying to combine satellite
-          products with ground observations.
-        </p>
-      </div>
-
-      <div className="flex items-start gap-8 py-8 border-t border-gray-200 dark:border-gray-700">
+    <div className="max-w-4xl mx-auto py-12">
+      <div className="flex flex-col md:flex-row items-start gap-8">
+        {/* Left column */}
         <div className="flex-shrink-0">
           <Image
             src={Avatar}
             alt="avatar"
-            width={120}
-            height={120}
+            width={160}
+            height={160}
             className="rounded-full object-cover"
           />
-        </div>
-        <div className="space-y-1">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            Chen Xuanyu (陈炫羽)
-          </h2>
-          <p className="text-gray-500 dark:text-gray-400">
-            Hohai University · Hydrology &amp; Water Resources Engineering
-          </p>
-          <div className="flex gap-3 pt-2">
-            <SocialIcon
-              kind="mail"
-              href={`mailto:${siteMetadata.email}`}
-              size={5}
-            />
-            <SocialIcon kind="github" href={siteMetadata.github} size={5} />
+          <div className="mt-4 space-y-1">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              Chen Xuanyu (陈炫羽)
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400">
+              Hohai University
+            </p>
+            <p className="text-gray-500 dark:text-gray-400">
+              Hydrology &amp; Water Resources
+            </p>
+            <div className="flex gap-3 pt-2">
+              <SocialIcon
+                kind="mail"
+                href={`mailto:${siteMetadata.email}`}
+                size={5}
+              />
+              <SocialIcon kind="github" href={siteMetadata.github} size={5} />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="prose prose-gray dark:prose-invert max-w-none space-y-6 py-8 border-t border-gray-200 dark:border-gray-700">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          Research
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I&apos;ve worked on a LightGBM multi-source precipitation fusion project with Prof.
-          Yong Bin, and a D-PINN hydraulic prediction project that went to ICIC 2026.
-          Right now I&apos;m exploring physics-informed architectures for precipitation
-          nowcasting — looking at ConvLSTM, Earthformer, and thinking about where
-          conservation laws actually belong in modern transformer-based models.
-        </p>
+        {/* Right column */}
+        <div className="flex-1 space-y-6">
+          <div>
+            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl mb-4">
+              About Me
+            </h1>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+              Junior at Hohai University studying hydrology. I&apos;m interested in
+              deep learning applications for environmental forecasting — precipitation
+              nowcasting, physics-informed models, and data fusion from multiple
+              sources like satellite and ground observations.
+            </p>
+          </div>
 
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          Projects
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          Building DUYA — a desktop AI Agent framework for hydrology workflows. Also
-          doing some infrastructure work with HydroArray, trying to make hydrological
-          models easier to plug into ML pipelines.
-        </p>
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              Research &amp; Interests
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2">
+              Right now I&apos;m exploring AI Agent architectures and how they might help
+              automate hydrology workflows. I&apos;ve worked with machine learning models
+              like LightGBM and physics-informed neural networks for hydraulic
+              prediction. I keep an eye on the latest work in weather prediction
+              models — ConvLSTM, transformer-based approaches, and ideas around
+              blending physical constraints with deep learning.
+            </p>
+          </div>
 
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          What&apos;s Next
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          Applying for MPhil programs in precipitation nowcasting + deep learning.
-          If that doesn&apos;t work out, I&apos;ll figure out a different path — building
-          things matters more to me than a specific degree.
-        </p>
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              Projects
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2">
+              Building DUYA — a desktop AI Agent framework for hydrology workflows.
+              Also working on HydroArray, trying to make hydrological models easier
+              to plug into ML pipelines.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              What&apos;s Next
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2">
+              Figuring out the next step. Building things matters more to me than a
+              specific path — whether that&apos;s continuing in research or going
+              deeper into AI agent development.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
