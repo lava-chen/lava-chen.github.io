@@ -3,18 +3,6 @@ import Avatar from "@/public/avatar.png";
 import { siteMetadata } from "@/data/siteMetaData";
 import SocialIcon from "@/components/ui/social-icons";
 
-function Emoji({ symbol, label }: { symbol: string; label?: string }) {
-  return (
-    <span
-      role="img"
-      aria-label={label || ""}
-      aria-hidden={label ? "false" : "true"}
-    >
-      {symbol}
-    </span>
-  );
-}
-
 export default function AboutPage() {
   return (
     <>
