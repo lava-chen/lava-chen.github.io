@@ -49,20 +49,8 @@ export default async function Home() {
             >
               Projects &rarr;
             </Link>
-            <a
-              href={siteMetadata.github}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-            >
-              <span className="sr-only">GitHub</span>
-              <SocialIcon kind="github" size={5} />
-            </a>
-            <a
-              href={`mailto:${siteMetadata.email}`}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-            >
-              <span className="sr-only">Email</span>
-              <SocialIcon kind="mail" size={5} />
-            </a>
+            <SocialIcon kind="github" href={siteMetadata.github} size={5} />
+            <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={5} />
           </div>
         </div>
 
