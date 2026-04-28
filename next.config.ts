@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
   experimental: {
     // logging: true, // 启用日志
   },
