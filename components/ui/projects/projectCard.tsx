@@ -8,8 +8,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const { title, description, imgSrc, url, repo, builtWith } = project;
 
   const repository = repo as GithubRepository | undefined;
+  const repoString = typeof repo === 'string' ? repo : null;
 
-  const href = repository?.url || url;
+  const href = repository?.url || url || (repoString ? `https://github.com/${repoString}` : null);
 
   return (
     <div className="md max-w-[544px] p-4 md:w-1/2">
