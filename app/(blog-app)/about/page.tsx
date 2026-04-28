@@ -5,118 +5,77 @@ import SocialIcon from "@/components/ui/social-icons";
 
 export default function AboutPage() {
   return (
-    <>
-      <div className="about divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            About Me
-          </h1>
-          <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
-            Hydrology, Machine Learning, and Precipitation Nowcasting.
-          </p>
+    <div className="max-w-2xl mx-auto py-12">
+      <div className="space-y-6 pb-8">
+        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
+          About Me
+        </h1>
+        <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg leading-relaxed">
+          Junior at Hohai University, studying hydrology. Interested in using deep
+          learning to improve precipitation nowcasting — particularly the physics-constrained
+          kind, and the data fusion problem when you&apos;re trying to combine satellite
+          products with ground observations.
+        </p>
+      </div>
+
+      <div className="flex items-start gap-8 py-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="flex-shrink-0">
+          <Image
+            src={Avatar}
+            alt="avatar"
+            width={120}
+            height={120}
+            className="rounded-full object-cover"
+          />
         </div>
-
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center space-x-2 pt-8 sm:pt-28">
-            <Image
-              src={Avatar}
-              alt="avatar"
-              width={192}
-              height={192}
-              objectFit="cover"
-              className="h-48 w-48 rounded-full"
+        <div className="space-y-1">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+            Chen Xuanyu (陈炫羽)
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400">
+            Hohai University · Hydrology &amp; Water Resources Engineering
+          </p>
+          <div className="flex gap-3 pt-2">
+            <SocialIcon
+              kind="mail"
+              href={`mailto:${siteMetadata.email}`}
+              size={5}
             />
-
-            <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
-              Chen Xuanyu (陈炫羽)
-            </h3>
-            <div className="text-gray-500 dark:text-gray-400">
-              {siteMetadata.occupation}
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              {siteMetadata.school}
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              Hydrology & Water Resources Engineering
-            </div>
-
-            <div className="mt-2 flex gap-3">
-              <SocialIcon
-                kind="mail"
-                href={`mailto:${siteMetadata.email}`}
-                size={6}
-              />
-
-              <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-            </div>
-          </div>
-
-          <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">
-            <h2>Education</h2>
-            <ul>
-              <li>
-                <strong>Bachelor of Engineering in Hydrology & Water Resources Engineering</strong>
-                <br />
-                Hohai University (河海大学), Nanjing, China
-                <br />
-                GPA: 4.29/5.0 | Expected Graduation: June 2027
-              </li>
-            </ul>
-
-            <h2>Research Interests</h2>
-            <p>
-              Physics-constrained deep learning for precipitation nowcasting.
-              Interested in integrating physical conservation laws into neural network
-              architectures for more reliable hydrological predictions.
-            </p>
-
-            <h2>Research Experience</h2>
-            <h3>1. D-PINN: Physics-Informed Neural Networks for Hydraulic Prediction</h3>
-            <p>
-              <em>ICIC 2026 Oral Presentation (3rd Author)</em>
-              <br />
-              Developed physics-informed neural networks with dual-encoder architecture
-              incorporating Saint-Venant conservation laws for hydraulic prediction tasks.
-            </p>
-
-            <h3>2. LightGBM Multi-source Precipitation Fusion</h3>
-            <p>
-              <em>Under Prof. Yong Bin</em>
-              <br />
-              Built a three-stage fusion model combining satellite precipitation (FY-3G, GPM)
-              and gauge data. Achieved significant improvements: CC 0.739&rarr;0.891,
-              POD 0.524&rarr;0.997 in Fujian mountainous terrain.
-            </p>
-
-            <h3>3. DUYA: Desktop AI Agent Framework</h3>
-            <p>
-              Self-built desktop AI Agent framework using Electron + Vite with hydrology-domain
-              knowledge base and multi-tool orchestration for autonomous satellite data
-              retrieval and flood warning workflows.
-            </p>
-
-            <h2>Awards</h2>
-            <ul>
-              <li>MCM/ICM Meritorious Award</li>
-              <li>National Math Competition Provincial First Prize</li>
-            </ul>
-
-            <h2>Skills</h2>
-            <ul>
-              <li><strong>Programming:</strong> Python, PyTorch, LightGBM</li>
-              <li><strong>Data:</strong> Satellite precipitation data (FY-3G, GPM, CLDAS)</li>
-              <li><strong>Tools:</strong> Git, Docker</li>
-            </ul>
-
-            <h2>Contact</h2>
-            <p>
-              Email: <a href="mailto:2301010227@hhu.edu.cn">2301010227@hhu.edu.cn</a>
-              <br />
-              GitHub: <a href="https://github.com/lava-chen">github.com/lava-chen</a>
-            </p>
+            <SocialIcon kind="github" href={siteMetadata.github} size={5} />
           </div>
         </div>
       </div>
-    </>
+
+      <div className="prose prose-gray dark:prose-invert max-w-none space-y-6 py-8 border-t border-gray-200 dark:border-gray-700">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          Research
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          I&apos;ve worked on a LightGBM multi-source precipitation fusion project with Prof.
+          Yong Bin, and a D-PINN hydraulic prediction project that went to ICIC 2026.
+          Right now I&apos;m exploring physics-informed architectures for precipitation
+          nowcasting — looking at ConvLSTM, Earthformer, and thinking about where
+          conservation laws actually belong in modern transformer-based models.
+        </p>
+
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          Projects
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Building DUYA — a desktop AI Agent framework for hydrology workflows. Also
+          doing some infrastructure work with HydroArray, trying to make hydrological
+          models easier to plug into ML pipelines.
+        </p>
+
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          What&apos;s Next
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Applying for MPhil programs in precipitation nowcasting + deep learning.
+          If that doesn&apos;t work out, I&apos;ll figure out a different path — building
+          things matters more to me than a specific degree.
+        </p>
+      </div>
+    </div>
   );
 }
