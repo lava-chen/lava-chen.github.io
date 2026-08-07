@@ -1,3 +1,4 @@
+import "katex/dist/katex.min.css";
 import "@/components/ui/globals.css";
 import type { Metadata } from "next";
 import { lusitana } from "@/components/ui/fonts";
