@@ -23,13 +23,13 @@ const projectsData: Project[] = [
   },
   {
     type: "self",
-    title: "Personal Website",
+    title: "pi-dag",
     description:
-      "This website — built with Next.js, featuring dark/pink theme toggle, blog system, and project showcase.",
-    repo: "lava-chen/lava-chen.github.io",
-    builtWith: ["Next.js", "Tailwind", "TypeScript", "Vercel"],
+      "Declarative DAG orchestration engine for multi-agent pipelines and hybrid AI+deterministic workflows, with YAML-defined agent/command nodes, structured output validation, feedback loops, and an interactive TUI browser.",
+    repo: "lava-chen/pi-dag",
+    builtWith: ["TypeScript", "YAML", "Bun", "Node.js"],
     imgSrc: "",
-    url: "https://lavachen.org",
+    url: "",
   },
   {
     type: "self",

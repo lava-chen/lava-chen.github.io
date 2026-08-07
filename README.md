@@ -16,4 +16,4 @@ To achieve this, I decided to move away from using the content-layer component a
 - Feel free to explore the project, **suggest improvements, or help me correct any mistakes in the code**. It would be a great honor!
 
 ## Live Blog:
-Check out the live version of the blog at https://lavachen.org.
+Check out the live version of the blog at https://lavachen.xyz.
